@@ -14,6 +14,7 @@ int abrirDoArquivo(){
       //Agenda[0][1] pode ser os telefones do contato numero 0
       printf("%s", umalinha);
     }
+    fclose(fd);
     return 1;
   }
   return 0;
@@ -24,15 +25,16 @@ int salvarNoArquivo(){
   char umalinha[1024];
   FILE *fd = fopen(filename, "w"); //Ele vai destruir o arquivo existente, cuidado!
   if(fd){
-    while(/*alguma coisa aqui*/){
+    while(/*alguma coisa aqui*/1){
       //Formate um contato para uma linha
-      if(fputs(umalinha, 1024, fd)==EOF)
+      if(fputs(umalinha, fd)==EOF)
       {
         puts("Erro ao tentar gravar o arquivo!");
-        return 0; 
+        return 0;
       }
       printf("%s", umalinha);
     }
+    fclose(fd);
     return 1;
   }
   return 0;
@@ -44,7 +46,7 @@ int menu(){
  //Cadastrar contatos
  //Buscar contatos ou telefone
  //Salvar a agenda
-
+ return 0;
 }
 
 int main(){
