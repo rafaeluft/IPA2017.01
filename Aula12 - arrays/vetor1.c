@@ -10,5 +10,6 @@ int main(){
     printf("%d, ", V2[i]);
   }
   //Media e variancia do vetor
+
   return 0;
 }

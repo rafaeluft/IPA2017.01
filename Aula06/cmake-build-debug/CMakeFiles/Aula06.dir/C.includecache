@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rafael/Documents/UFT/IPA2017.01/Aula06/main.c
+stdio.h
+-
+time.h
+-
+stdlib.h
+-
+
